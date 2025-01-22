@@ -12,7 +12,7 @@ create table category
     id      bigserial primary key,
     user_id int          not null,
     name    varchar(255) not null,
-    "limit" float          not null,
+    "limit" float,
 
     foreign key (user_id) references usr (id),
     unique (user_id, name)
